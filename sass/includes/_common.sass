@@ -1,0 +1,52 @@
+// Media query screen sizes
+$mobile-portrait: 320px
+$mobile-landscape: 480px
+$tablet-portrait: 600px
+$tablet-landscape: 768px
+$middle-desktop: 1024px
+$large-desktop: 1180px
+
+
+// Common styles
+html,
+body
+    height: 100%
+
+body
+    font-family: 'Open Sans', sans-serif
+    font-weight: normal
+
+.wrapper
+    background-color: #80c462
+    background-image: url("../image/bg.jpg")
+    background-repeat: no-repeat
+    background-position: top center
+    box-sizing: border-box
+    min-height: 100%
+    overflow: hidden
+    //@include respond-to(middle-desktop)
+    //    background-position: top center
+    //    background-size: 100% auto
+    //    background-image: url("../image/bg_1024.jpg")
+    //@include respond-to(tablet-landscape)
+    //    background-image: url("../image/bg_768.jpg")
+    //@include respond-to(mobile-portrait)
+    //    background-image: url("../image/bg_320.jpg")
+
+.container
+    position: relative
+    box-sizing: border-box
+    margin: 0 auto
+    padding: 0 20px
+    max-width: 1180px
+    @include respond-to(middle-desktop)
+        max-width: 1024px
+    @include respond-to(tablet-landscape)
+        max-width: 768px
+    @include respond-to(tablet-portrait)
+        max-width: 600px
+    @include respond-to(mobile-landscape)
+        max-width: 480px
+    @include respond-to(mobile-portrait)
+        max-width: 100%
+
