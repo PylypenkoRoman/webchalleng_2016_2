@@ -17,9 +17,9 @@ gulp.task('connect', function() {
 
 //css
 gulp.task('css', function () {
-    return gulp.src('scss/*.scss')
+    return gulp.src('sass/*.sass')
         .pipe(sass())
-        .pipe(prefixer({browsers: ['last 15 versions'] }))
+        .pipe(prefixer({browsers: ['last 4 versions'] }))
         .pipe(gulp.dest('app/css'))
         .pipe(connect.reload());
 });
@@ -32,7 +32,7 @@ gulp.task('html', function () {
 
 //watch
 gulp.task('watch', function () {
-    gulp.watch('scss/includes/*.scss', ['css'])
+    gulp.watch('sass/includes/*.sass', ['css'])
     gulp.watch('app/*.html', ['html'])
 });
 
